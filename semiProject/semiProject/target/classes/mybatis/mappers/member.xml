@@ -18,4 +18,11 @@
       ]]>
 	</select>
 
+	<insert id="insertMember"  parameterType="memberVO">
+		<![CDATA[
+		 insert into r_member(id,pwd, name, contents,store)
+		 values(#{id}, #{pwd}, #{name}, #{contents}, #{store})
+		]]>      
+	</insert>
+	
 </mapper>

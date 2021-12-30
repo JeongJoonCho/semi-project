@@ -7,6 +7,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
 import mc.sn.semi.dao.MemberDAO;
+import mc.sn.semi.vo.MemberVO;
 
 @Service("memberService")
 public class MemberServiceImpl implements MemberService {
@@ -18,5 +19,10 @@ public class MemberServiceImpl implements MemberService {
 		List membersList = null;
 		membersList = memberDAO.selectOwnerList();
 		return membersList;
+	}
+	
+	@Override
+	public void addMember(MemberVO vo) {
+		memberDAO.insertMember(vo);
 	}
 }
