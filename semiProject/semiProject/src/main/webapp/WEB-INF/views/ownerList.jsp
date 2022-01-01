@@ -25,7 +25,7 @@
    
 <c:forEach var="owner" items="${ownersList}" >
    	<tr align="center">
-   		<td><a href="/TReserve/brd.do?cmd=boardList&ownerId=${owner.id}">${owner.name}</a></td>
+   		<td><a href="/&ownerId=${owner.id}">${owner.name}</a></td>
    		<td>${owner.contents}</td>
    		<td>${owner.mon}</td>
    		<td>${owner.tue}</td>

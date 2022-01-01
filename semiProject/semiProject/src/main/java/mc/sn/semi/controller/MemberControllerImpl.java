@@ -46,7 +46,7 @@ public class MemberControllerImpl implements MemberController {
 			HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView mav = new ModelAndView();
 		memberService.addMember(memberVO);
-		String url = "/ownerList";
+		String url = "redirect:/ownerList";
 		mav.setViewName(url);
 		return mav;
 	}
