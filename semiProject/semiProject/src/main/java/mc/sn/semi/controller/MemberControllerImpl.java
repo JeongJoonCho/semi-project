@@ -20,17 +20,20 @@ public class MemberControllerImpl implements MemberController {
 	@Autowired
 	private MemberService memberService;
 	
+	// 홈화면
 	@Override
-	@RequestMapping(value="/ownerList" ,method = {RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value="/ownerListForm" ,method = {RequestMethod.GET,RequestMethod.POST})
 	public ModelAndView listMembers(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ModelAndView mav = new ModelAndView();
 		String url = "/ownerList";
 		mav.setViewName(url);
+		// 가게리스트를 불러옴. 조건조회
 		List ownersList = memberService.listOwners();
 		mav.addObject("ownersList", ownersList);
 		return mav;
 	}
 	
+	// 회원가입 화면 이동
 	@Override
 	@RequestMapping(value="/joinForm" ,method = RequestMethod.GET)
 	public ModelAndView joinForm(HttpServletRequest request, HttpServletResponse response) {
@@ -40,13 +43,16 @@ public class MemberControllerImpl implements MemberController {
 		return mav;
 	}
 	
+	// 회원가입 실행
 	@Override
 	@RequestMapping(value="/addMember" ,method = RequestMethod.POST)
 	public ModelAndView addMember(@ModelAttribute("member") MemberVO memberVO,
 			HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView mav = new ModelAndView();
+		// 회원 정보 추가
 		memberService.addMember(memberVO);
-		String url = "redirect:/ownerList";
+		// 완료 후 홈화면으로 이동
+		String url = "redirect:/ownerListForm";
 		mav.setViewName(url);
 		return mav;
 	}
