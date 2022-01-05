@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.board">
+	<resultMap id="boardResult" type="boardVO">
+		<result property="articleNO" column="articleNO" />
+        <result property="content" column="content" />
+        <result property="writedate" column="writedate" />
+        <result property="ownerId" column="ownerId" />
+        <result property="title" column="title" />
+        <result property="id" column="id" />
+	</resultMap> 
+
+	<select id="selectBoardById" resultType="boardVO">
+      <![CDATA[
+         select * from r_board	where ownerId = #{ownerId}
+      ]]>
+	</select>
+
+	
+	
+</mapper>
