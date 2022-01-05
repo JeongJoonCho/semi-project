@@ -25,4 +25,9 @@ public class MemberServiceImpl implements MemberService {
 	public void addMember(MemberVO vo) {
 		memberDAO.insertMember(vo);
 	}
+	
+	@Override
+	public MemberVO login(MemberVO vo) {
+		return memberDAO.selectForLogin(vo);
+	}
 }

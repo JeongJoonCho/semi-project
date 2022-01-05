@@ -27,4 +27,9 @@ public class MemberDAOImpl implements MemberDAO {
 	public void insertMember(MemberVO vo) {
 		sqlSession.insert("mapper.member.insertMember", vo);
 	}
+	
+	@Override
+	public MemberVO selectForLogin(MemberVO vo) {
+		return sqlSession.selectOne("mapper.member.selectForLogin", vo);
+	}
 }

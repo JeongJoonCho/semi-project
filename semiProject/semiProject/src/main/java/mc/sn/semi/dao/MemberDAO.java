@@ -10,4 +10,6 @@ public interface MemberDAO {
 	public List selectOwnerList() throws DataAccessException;
 	
 	public void insertMember(MemberVO vo);
+	
+	public MemberVO selectForLogin(MemberVO vo);
 }

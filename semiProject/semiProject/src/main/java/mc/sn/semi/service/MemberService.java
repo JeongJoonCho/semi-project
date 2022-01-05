@@ -10,4 +10,6 @@ public interface MemberService {
 	public List listOwners() throws DataAccessException;
 
 	public void addMember(MemberVO vo);
+	
+	public MemberVO login(MemberVO vo);
 }

@@ -19,6 +19,17 @@
       ]]>
 	</select>
 
+	<insert id="insertBoardRequest"  parameterType="boardVO">
+		<![CDATA[
+		 insert into r_board(content,ownerId,title,id)
+		 values(#{content}, #{ownerId}, #{title}, #{id})
+		]]>      
+	</insert>
 	
+	<select id="selectBoard" resultType="boardVO" parameterType="int">
+      <![CDATA[
+         select * from r_board	where articleNO = #{articleNO}
+      ]]>
+	</select>
 	
 </mapper>

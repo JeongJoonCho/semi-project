@@ -14,13 +14,19 @@
 <h1 align="center">
 예약 게시판
 </h1>
-<table align="right" border="1">
-	<tr >
-		<td colspan="5">
-			<a  href="${contextPath}/loginForm" style="text-align:center">글쓰기</a>
-			<a  href="${contextPath}/joinForm" style="text-align:center">회원가입</a>
-		</td>
-	</tr>
+<table align="right" >
+<tr >
+<c:choose>
+	<c:when test="${isLogOn == true && member != null}">
+		<td><input type="button" name="write" value="글쓰기" onClick="location.href='/semi/view_requestReserve?ownerId=${ownerId }'"  />
+		<input type="button" name="logout" value="로그아웃" onClick="location.href='/semi/logout'"  /></td>
+	</c:when>
+	<c:otherwise>
+		<td><input type="button" name="join" value="회원가입" onClick="location.href='/semi/view_joinForm'"  />
+		<input type="button" name="login" value="로그인" onClick="location.href='/semi/view_login'"  /></td>
+	</c:otherwise>
+</c:choose>
+</tr><br><br>
 </table>
 <br/>
 <br/>
@@ -36,7 +42,7 @@
 	<tr height="10" align="center">
 		<td name="articleNO" id="articleNO">${list.articleNO }</td>
 		<td name="id" id="id">${list.id }</td>
-		<td name="title" id="title"><a href="/TReserve/brd.do?cmd=viewArticle&id=&title=">${list.title }</a></td>
+		<td name="title" id="title"><a href="${contextPath}/view_article?articleNO=${list.articleNO}">${list.title }</a></td>
 		<td name="ownerId" id="ownerId">${list.ownerId }</td>
 		<td name="writeDate" id="writeDate">${list.writedate }</td>
 	</tr>

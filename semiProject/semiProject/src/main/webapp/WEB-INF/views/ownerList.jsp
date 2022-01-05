@@ -10,6 +10,19 @@
 
 </head>
 <body>
+<table align="right" >
+	<tr >
+		<c:choose>
+			   <c:when test="${isLogOn == true && member != null}">
+			   	<td><input type="button" name="logout" value="로그아웃" onClick="location.href='/semi/logout'"  /></td>
+			   	</c:when>
+				<c:otherwise>
+			   		<td><input type="button" name="join" value="회원가입" onClick="location.href='/semi/view_joinForm'"  />
+			   		<input type="button" name="login" value="로그인" onClick="location.href='/semi/view_login'"  /></td>
+			   </c:otherwise>
+		</c:choose>
+	</tr>
+</table><br><br>
 <table border="1"  align="center"  width="80%">
     <tr align="center"   bgcolor="lightgray">
       <th>가게이름</th>
@@ -40,6 +53,8 @@
    
    
    </table>
-   <a  href="${contextPath}/joinForm"><h1 style="text-align:center">회원가입</h1></a>
+
+	
+
 </body>
 </html>

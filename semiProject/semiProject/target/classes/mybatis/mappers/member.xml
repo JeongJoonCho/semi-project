@@ -25,4 +25,10 @@
 		]]>      
 	</insert>
 	
+	<select id="selectForLogin" resultType="memberVO" parameterType="memberVO">
+      <![CDATA[
+         select * from r_member	where id = #{id} and pwd = #{pwd}
+      ]]>
+	</select>
+	
 </mapper>
