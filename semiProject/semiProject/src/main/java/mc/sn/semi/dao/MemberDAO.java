@@ -1,6 +1,7 @@
 package mc.sn.semi.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.dao.DataAccessException;
 
@@ -12,4 +13,6 @@ public interface MemberDAO {
 	public void insertMember(MemberVO vo);
 	
 	public MemberVO selectForLogin(MemberVO vo);
+	
+	public void updateCommitDay(Map commitMap);
 }

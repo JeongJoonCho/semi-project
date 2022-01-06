@@ -18,4 +18,9 @@ public interface BoardController {
 			HttpServletRequest request, HttpServletResponse response);
 	
 	public ModelAndView viewArticle(@RequestParam("articleNO") int articleNO,HttpServletRequest request, HttpServletResponse response);
+	
+	public ModelAndView viewCommit(@ModelAttribute("request") BoardVO boardVO,
+			HttpServletRequest request, HttpServletResponse response);
+	
+	public ModelAndView commitFin(HttpServletRequest request, HttpServletResponse response);
 }

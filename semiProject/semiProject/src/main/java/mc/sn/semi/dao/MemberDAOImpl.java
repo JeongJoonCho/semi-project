@@ -1,6 +1,7 @@
 package mc.sn.semi.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +32,10 @@ public class MemberDAOImpl implements MemberDAO {
 	@Override
 	public MemberVO selectForLogin(MemberVO vo) {
 		return sqlSession.selectOne("mapper.member.selectForLogin", vo);
+	}
+	
+	@Override
+	public void updateCommitDay(Map commitMap) {
+		sqlSession.update("mapper.member.updateCommitDay", commitMap);
 	}
 }

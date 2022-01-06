@@ -1,6 +1,7 @@
 package mc.sn.semi.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -29,5 +30,10 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public MemberVO login(MemberVO vo) {
 		return memberDAO.selectForLogin(vo);
+	}
+	
+	@Override
+	public void finishCommit(Map commitMap) {
+		memberDAO.updateCommitDay(commitMap);
 	}
 }

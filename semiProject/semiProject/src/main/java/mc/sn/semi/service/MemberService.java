@@ -1,6 +1,7 @@
 package mc.sn.semi.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.dao.DataAccessException;
 
@@ -12,4 +13,6 @@ public interface MemberService {
 	public void addMember(MemberVO vo);
 	
 	public MemberVO login(MemberVO vo);
+	
+	public void finishCommit(Map commitMap);
 }

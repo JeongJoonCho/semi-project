@@ -31,4 +31,10 @@
       ]]>
 	</select>
 	
+	<update id="updateCommitDay" parameterType="java.util.Map">
+		<![CDATA[
+		update r_member
+		set ${day}=#{id} where id=#{ownerId}
+		]]>
+	</update>
 </mapper>

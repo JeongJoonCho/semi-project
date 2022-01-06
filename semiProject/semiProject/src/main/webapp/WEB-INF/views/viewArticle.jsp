@@ -36,21 +36,21 @@
 </style>
 </head>
 <body>
-<form action="${contextPath}/member/commitForm.do" method="post">
+<form action="${contextPath}/view_commitForm" method="post">
 <h1 align="center">예약 내용</h1>
 <table>
 
 	<tr><th>글번호</th><td>${board.articleNO }</td></tr>
 	<tr><th>작성 시간</th><td>${board.writedate }</td></tr>
-	<tr><th name = "id" id="id">작성자</th><td>${board.id }</td></tr>
-	<tr><th>가게 이름</th><td>${board.ownerId }</td></tr>
+	<tr><th>작성자</th><td><input type="text" style="border:none" name="id" value="${board.id }" readonly></td></tr>
+	<tr><th>가게 이름</th><td><input type="text" style="border:none" name="ownerId" value="${board.ownerId }" readonly></td></tr>
 	<tr><th>글제목</th><td>${board.title }</td></tr>
 	<tr><th>글내용</th><td>${board.content}</td></tr>
 
-</table>
+
 <br/>
 <br/>
-<table>
+
 <c:choose>
 	<c:when test="${isLogOn == true && member.id == board.ownerId}">
 	<tr>
