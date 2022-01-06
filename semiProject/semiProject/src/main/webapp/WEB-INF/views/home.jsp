@@ -8,9 +8,8 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	<input type="button" value="예약 서비스 이용하러 가기" onClick="location.href='/semi/ownerListForm'"  />
 </h1>
 
-<P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>
