@@ -7,9 +7,12 @@
 	<title>Home</title>
 </head>
 <body>
-<h1>
-	<input type="button" value="예약 서비스 이용하러 가기" onClick="location.href='/semi/ownerListForm'"  />
-</h1>
+<div>
+	식당 예약 서비스
+</div><br><br>
+<div>
+	<input style="float: center;  height: 50pt;" type="button" value="예약 서비스 이용하러 가기" onClick="location.href='/semi/ownerListForm'"  />
+</div>
 
 </body>
 </html>
