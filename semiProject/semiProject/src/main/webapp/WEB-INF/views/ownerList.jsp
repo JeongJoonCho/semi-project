@@ -39,14 +39,14 @@
 <c:forEach var="owner" items="${ownersList}" >
    	<tr align="center">
    		<td><a href="${contextPath}/boardList?ownerId=${owner.id}">${owner.name}</a></td>
-   		<td>${owner.contents}</td>
-   		<td>${owner.mon}</td>
-   		<td>${owner.tue}</td>
-   		<td>${owner.wed}</td>
-   		<td>${owner.thu}</td>
-   		<td>${owner.fri}</td>
-   		<td>${owner.sat}</td>
-   		<td>${owner.sun}</td>
+   		<td><a href="${contextPath}/view_board">${owner.contents}</a></td>
+   		<td><a href="${contextPath}/view_board">${owner.mon}</a></td>
+   		<td><a href="${contextPath}/view_board">${owner.tue}</a></td>
+   		<td><a href="${contextPath}/view_board">${owner.wed}</a></td>
+   		<td><a href="${contextPath}/view_board">${owner.thu}</a></td>
+   		<td><a href="${contextPath}/view_board">${owner.fri}</a></td>
+   		<td><a href="${contextPath}/view_board">${owner.sat}</a></td>
+   		<td><a href="${contextPath}/view_board">${owner.sun}</a></td>
    	</tr>
 </c:forEach>
    
