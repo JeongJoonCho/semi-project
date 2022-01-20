@@ -39,7 +39,7 @@
 <c:forEach var="owner" items="${ownersList}" >
    	<tr align="center">
    		<td><a href="${contextPath}/boardList?ownerId=${owner.id}">${owner.name}</a></td>
-   		<td><a href="${contextPath}/view_board">${owner.contents}</a></td>
+   		<td>${owner.contents}</td>
    		<td><a href="${contextPath}/view_board">${owner.mon}</a></td>
    		<td><a href="${contextPath}/view_board">${owner.tue}</a></td>
    		<td><a href="${contextPath}/view_board">${owner.wed}</a></td>
