@@ -13,12 +13,14 @@
         <result property="id" column="id" />
 	</resultMap> 
 
+	<!-- 가게 선택 시 예약 요청 리스트 보기 -->
 	<select id="selectBoardById" resultType="boardVO">
       <![CDATA[
          select * from r_board	where ownerId = #{ownerId}
       ]]>
 	</select>
 
+	<!-- 예약 요청 -->
 	<insert id="insertBoardRequest"  parameterType="boardVO">
 		<![CDATA[
 		 insert into r_board(content,ownerId,title,id)
@@ -26,6 +28,7 @@
 		]]>      
 	</insert>
 	
+	<!-- 예약 요청 상세 보기 -->
 	<select id="selectBoard" resultType="boardVO" parameterType="int">
       <![CDATA[
          select * from r_board	where articleNO = #{articleNO}
