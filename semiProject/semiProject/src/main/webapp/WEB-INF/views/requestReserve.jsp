@@ -20,19 +20,27 @@
 <table border="0" align="center">
 	<tr>
 		<td align="right">아이디: </td>
-		<td colspan=2  align="left"><input type="text" size="20" maxlength="100" name="id" value="${member.id}" readonly/> </td>
+		<td colspan=2  align="left">
+			<input type="text" size="20" maxlength="100" name="id" value="${member.id}" readonly/> 
+		</td>
 	</tr>
 	<tr>
 		<td align="right">가게이름: </td>
-		<td colspan="2"><input type="text" size="20" maxlength="100" name="ownerId" value="${ownerId}" readonly></td>
+		<td colspan="2">
+			<input type="text" size="20" maxlength="100" name="ownerId" value="${ownerId}" readonly>
+		</td>
 	</tr>
 	<tr>
 		<td align="right">제목: </td>
-		<td colspan="2"><input type="text" size="67"  maxlength="500" name="title" /></td>
+		<td colspan="2">
+			<input type="text" size="67"  maxlength="500" name="title" />
+		</td>
 	</tr>
 	<tr>
 		<td align="right" valign="top"><br>내용: </td>
-		<td colspan=2><textarea name="content" rows="10" cols="65" maxlength="4000"></textarea> </td>
+		<td colspan=2>
+			<textarea name="content" rows="10" cols="65" maxlength="4000"></textarea> 
+		</td>
 	</tr>
 
 	<tr>

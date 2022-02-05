@@ -39,35 +39,54 @@
 <form action="${contextPath}/view_commitForm" method="post">
 <h1 align="center">예약 내용</h1>
 <table>
-
-	<tr><th>글번호</th><td>${board.articleNO }</td></tr>
-	<tr><th>작성 시간</th><td>${board.writedate }</td></tr>
-	<tr><th>작성자</th><td><input type="text" style="border:none" name="id" value="${board.id }" readonly></td></tr>
-	<tr><th>가게 이름</th><td><input type="text" style="border:none" name="ownerId" value="${board.ownerId }" readonly></td></tr>
-	<tr><th>글제목</th><td>${board.title }</td></tr>
-	<tr><th>글내용</th><td>${board.content}</td></tr>
-
-
+	<tr>
+		<th>글번호</th>
+		<td>${board.articleNO }</td>
+	</tr>
+	<tr>
+		<th>작성 시간</th>
+		<td>${board.writedate }</td>
+	</tr>
+	<tr>
+		<th>작성자</th>
+		<td>
+			<input type="text" style="border:none" name="id" value="${board.id }" readonly>
+		</td>
+	</tr>
+	<tr>
+		<th>가게 이름</th>
+		<td>	
+			<input type="text" style="border:none" name="ownerId" value="${board.ownerId }" readonly>
+		</td>
+	</tr>
+	<tr>
+		<th>글제목</th>
+		<td>${board.title }</td>
+	</tr>
+	<tr>
+		<th>글내용</th>
+		<td>${board.content}</td>
+	</tr>
 <br/>
 <br/>
 
-<c:choose>
-	<c:when test="${isLogOn == true && member.id == board.ownerId}">
-	<tr>
-		<td colspan="2">
-			<input type="submit" value="예약확인" id="validate">
-			<input type=button value="뒤로가기" onClick="history.back();" />
-		</td>
-	</tr>
-	</c:when>
-	<c:otherwise>
-	<tr>
-		<td colspan="2">
-			<input type=button value="뒤로가기" onClick="history.back();" />
-		</td>
-	</tr>
-	</c:otherwise>
-</c:choose>
+	<c:choose>
+		<c:when test="${isLogOn == true && member.id == board.ownerId}">
+		<tr>
+			<td colspan="2">
+				<input type="submit" value="예약확인" id="validate">
+				<input type=button value="뒤로가기" onClick="history.back();" />
+			</td>
+		</tr>
+		</c:when>
+		<c:otherwise>
+		<tr>
+			<td colspan="2">
+				<input type=button value="뒤로가기" onClick="history.back();" />
+			</td>
+		</tr>
+		</c:otherwise>
+	</c:choose>
 </table>
 </form>
 </body>

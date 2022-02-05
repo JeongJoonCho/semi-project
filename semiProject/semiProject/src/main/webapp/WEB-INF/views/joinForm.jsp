@@ -65,8 +65,9 @@
 			</td>
 		</tr>
 		<tr>
-			<td colspan="2"><input type="submit" value="가입" id="validate"><input type="reset" value="다시입력"></td>
-			
+			<td colspan="2">
+				<input type="submit" value="가입" id="validate"><input type="reset" value="다시입력">
+			</td>
 		</tr>
 	</table>
 	</form>

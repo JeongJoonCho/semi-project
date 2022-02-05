@@ -36,9 +36,20 @@
 <form action="${contextPath}/commitFin" method="post">
 <table>
 
-	<tr><td>작성자</td><td colspan="2"><input style="border:none" type="text" name="id" value="${id }" readonly></td></tr>
-	<tr><td>가게 이름</td><td colspan="2"><input style="border:none" type="text" name="ownerId" value="${ownerId }" readonly></td></tr>
-	<tr><td name = "day">예약 요일</td>
+	<tr>
+		<td>작성자</td>
+		<td colspan="2">
+			<input style="border:none" type="text" name="id" value="${id }" readonly>
+		</td>
+	</tr>
+	<tr>
+		<td>가게 이름</td>
+		<td colspan="2">
+			<input style="border:none" type="text" name="ownerId" value="${ownerId }" readonly>
+		</td>
+	</tr>
+	<tr>
+		<td name = "day">예약 요일</td>
 		<td>
 			<input type="radio" name="day" value="mon"> 월 <br>
 			<input type="radio" name="day" value="tue"> 화 <br> 
